@@ -1,29 +1,27 @@
 package screens;
 
-import java.awt.Font; // Necesaria para cambiar el tipo de letra
+import java.awt.Font;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class JInternalFrameInsertarCarrera extends JInternalFrame{
+public class JInternalFrameInsertarBachillerato extends JInternalFrame{
     private JLabel lblId;
-    private JLabel lblNombreCarrera;
-    private JLabel lblMonto;
+    private JLabel lblNombreBachillerato;
     private JTextField txtId;
-    private JTextField txtNombreCarrera;
-    private JTextField txtMonto;
+    private JTextField txtNombreBachillerato;
     private JButton btnAceptar;
     private JButton btnCancelar;
 
-    public JInternalFrameInsertarCarrera(){
-        super("Insertar carrera", 
+    public JInternalFrameInsertarBachillerato(){
+        super("Insertar Bachillerato", 
               true,  // resizable
               true,  // closable
               true,  // maximizable
               true); // iconifiable (minimizable)
-        this.setTitle("Insertar nueva carrera");
+        this.setTitle("Insertar nuevo bachillerato");
         this.setSize(400,400);
         initComponents();
     }
@@ -31,18 +29,15 @@ public class JInternalFrameInsertarCarrera extends JInternalFrame{
     private void initComponents(){
         // Creación de objetos
         lblId = new JLabel("Id:");
-        lblNombreCarrera = new JLabel("Nombre de carrera:");
-        lblMonto = new JLabel("Monto pagado:");
+        lblNombreBachillerato = new JLabel("Nombre de Bachillerato:");
         txtId = new JTextField();
-        txtNombreCarrera = new JTextField();
-        txtMonto = new JTextField();
+        txtNombreBachillerato = new JTextField();
         btnAceptar = new JButton("Aceptar");
         btnCancelar = new JButton("Cancelar");
 
         // Etiquetas
         lblId.setFont(new Font("Tahoma", 0, 14));
-        lblNombreCarrera.setFont(new Font("Tahoma", Font.BOLD, 16));
-        lblMonto.setFont(new Font("Tahoma", Font.BOLD, 16));
+        lblNombreBachillerato.setFont(new Font("Tahoma", Font.BOLD, 16));
         //Botones 
         btnAceptar.setFont(new Font("Tahoma", Font.BOLD, 16));
         btnCancelar.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -59,10 +54,8 @@ public class JInternalFrameInsertarCarrera extends JInternalFrame{
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addComponent(lblId)
                 .addComponent(txtId)
-                .addComponent(lblNombreCarrera)
-                .addComponent(txtNombreCarrera)
-                .addComponent(lblMonto)
-                .addComponent(txtMonto)
+                .addComponent(lblNombreBachillerato)
+                .addComponent(txtNombreBachillerato)
                 .addGroup(
                     layout.createSequentialGroup()
                         .addComponent(btnAceptar)
@@ -74,10 +67,8 @@ public class JInternalFrameInsertarCarrera extends JInternalFrame{
             layout.createSequentialGroup()
                 .addComponent(lblId)
                 .addComponent(txtId, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addComponent(lblNombreCarrera)
-                .addComponent(txtNombreCarrera, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                .addComponent(lblMonto)
-                .addComponent(txtMonto, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblNombreBachillerato)
+                .addComponent(txtNombreBachillerato, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                 .addGroup(
                     layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(btnAceptar)
@@ -85,6 +76,4 @@ public class JInternalFrameInsertarCarrera extends JInternalFrame{
                 )
         );
     }
-    
 }
-
