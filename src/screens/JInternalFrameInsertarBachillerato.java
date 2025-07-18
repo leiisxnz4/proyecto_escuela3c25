@@ -1,7 +1,7 @@
 package screens;
 
-import java.awt.Font;
-import javax.swing.GroupLayout;
+import java.awt.Font; //Necesaria para cambiar tipo de letra
+import javax.swing.GroupLayout; // Necesaria para crear el layout
 import javax.swing.JButton;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;

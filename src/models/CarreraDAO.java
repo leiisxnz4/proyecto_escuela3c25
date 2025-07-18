@@ -16,7 +16,7 @@ public class CarreraDAO {
 
     public int insertarCarrera(Carrera carrera){
         
-        String sql = "INSERT INTO carreras (idcarrera, nombre, monto) VALUES (?,?,?)"
+        String sql = "INSERT INTO carreras (idcarrera, nombre, monto) VALUES (?,?,?)";
         int rows = 0;
 
         try (PreparedStatement stmt = conn.prepareStatement(sql)){
@@ -25,8 +25,9 @@ public class CarreraDAO {
             stmt.setDouble(3, carrera.getMonto());
             rows = stmt.executeUpdate();
         } catch (SQLException e){
-            e.printStackTrace();
+            System.out.println("Error al insertar carrera: " + e.getMessage());
         }
-        return 0;
+        return rows;
+        
     }
 }

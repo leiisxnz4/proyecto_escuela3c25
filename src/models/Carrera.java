@@ -5,6 +5,11 @@ public class Carrera {
     private String nombre;
     private double monto;
     
+    public Carrera(int idcarrera, String nombre, double monto) {
+        this.idcarrera = idcarrera;
+        this.nombre = nombre;
+        this.monto = monto;
+    }
     public int getIdcarrera() {
         return idcarrera;
     }
